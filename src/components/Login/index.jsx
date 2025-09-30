@@ -1,11 +1,15 @@
 import { WalletButton } from "../WalletButton";
-import logo from "../../public/logo.png";
+import house from "./house.jpg";
 
 export const Login = () => {
   return (
     <div className="min-h-screen flex items-center justify-center p-6 bg-background text-foreground">
       <div className="w-full max-w-sm rounded-x1 border bg-card p-6 shadow-sm">
-        <img className="w-24 h-auto mx-auto mb-6" src={logo} alt="logo" />
+        <h1 className="mb-6">
+          <img className="w-10 h-auto" src={house} alt="logo" />
+          <strong>zk</strong>Stay
+        </h1>
+
         <div className="mb-6">
           <h1 className="text-xl font-semibold">
             Login to your zkStay account
