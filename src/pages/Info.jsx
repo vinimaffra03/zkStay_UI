@@ -122,7 +122,7 @@ export default function Info() {
             </div>
 
             {/* Botão de reserva */}
-            <button className="w-full bg-black-500 hover:bg-black-600 text-white py-4 px-6 rounded-xl font-medium text-lg transition-colors duration-200">
+            <button className="w-full bg-black hover:bg-gray-800 text-white py-4 px-6 rounded-xl font-medium text-lg transition-colors duration-200">
               Reservar
             </button>
           </div>
