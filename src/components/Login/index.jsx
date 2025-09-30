@@ -1,9 +1,11 @@
 import { WalletButton } from "../WalletButton";
+import logo from "../../public/logo.png";
 
 export const Login = () => {
   return (
     <div className="min-h-screen flex items-center justify-center p-6 bg-background text-foreground">
-      <div className="w-full max-w-sm rounded-xl border bg-card p-6 shadow-sm">
+      <div className="w-full max-w-sm rounded-x1 border bg-card p-6 shadow-sm">
+        <img className="w-24 h-auto mx-auto mb-6" src={logo} alt="logo" />
         <div className="mb-6">
           <h1 className="text-xl font-semibold">
             Login to your zkStay account
@@ -22,7 +24,6 @@ export const Login = () => {
               id="email"
               type="email"
               placeholder="m@example.com"
-              required
               className="h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm outline-none ring-offset-background placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             />
           </div>
@@ -42,7 +43,6 @@ export const Login = () => {
             <input
               id="password"
               type="password"
-              required
               className="h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm outline-none ring-offset-background placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             />
           </div>
