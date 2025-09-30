@@ -37,51 +37,49 @@ export default function Info() {
       <Header />
 
       <main className="max-w-6xl mx-auto px-6 lg:px-20 py-8">
-        {/* Botão de voltar */}
+        {/* Back button */}
         <button
           onClick={() => navigate("/")}
           className="flex items-center gap-2 text-gray-600 hover:text-gray-900 mb-6 transition-colors"
         >
           <ArrowLeft className="w-5 h-5" />
-          Voltar
+          Back
         </button>
 
-        {/* Layout principal */}
+        {/* Main layout */}
         <div>
-          {/* Imagem principal */}
+          {/* Main image */}
           <div className="relative h-[600px] rounded-2xl overflow-hidden mb-6">
             <img
               src={listing.image}
               alt={listing.type}
               className="w-full h-full object-cover"
             />
-            {/* Badge de imagem */}
+            {/* Image badge */}
             <div className="absolute top-4 right-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm">
               1/90
             </div>
           </div>
 
-          {/* Card de informações abaixo da imagem */}
+          {/* Information card below the image */}
           <div className="bg-white rounded-2xl p-6 shadow-xl">
-            {/* Título */}
+            {/* Title */}
             <h1 className="text-2xl font-bold text-gray-900 mb-2">
               {listing.type}
             </h1>
 
-            {/* Localização */}
+            {/* Location */}
             <div className="flex items-center gap-2 text-gray-600 mb-3">
               <MapPin className="w-4 h-4" />
-              <span>{cityName}, Brasil</span>
+              <span>{cityName}, Brazil</span>
             </div>
 
-            {/* Detalhes básicos */}
+            {/* Basic details */}
             <div className="text-gray-600 mb-4">
-              <p>
-                Espaço inteiro • 2 hóspedes • 1 quarto • 1 cama • 1 banheiro
-              </p>
+              <p>Entire place • 2 guests • 1 bedroom • 1 bed • 1 bathroom</p>
             </div>
 
-            {/* Rating e reviews */}
+            {/* Rating and reviews */}
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-1">
@@ -90,15 +88,15 @@ export default function Info() {
                 </div>
                 <div className="flex items-center gap-2 text-yellow-600">
                   <span className="text-sm">🏆</span>
-                  <span className="text-sm">Preferido dos hóspedes</span>
+                  <span className="text-sm">Guest favorite</span>
                 </div>
                 <div>
-                  <span className="text-sm text-gray-600">22 avaliações</span>
+                  <span className="text-sm text-gray-600">22 reviews</span>
                 </div>
               </div>
             </div>
 
-            {/* Preço */}
+            {/* Price */}
             <div className="mb-4">
               <div className="flex items-baseline gap-2 mb-1">
                 <span className="line-through text-gray-500">R$490</span>
@@ -106,62 +104,55 @@ export default function Info() {
                   {listing.price}
                 </span>
               </div>
-              <p className="text-sm text-gray-600">
-                por 2 noites • 12-14 de dez.
-              </p>
+              <p className="text-sm text-gray-600">for 2 nights • Dec 12-14</p>
             </div>
 
-            {/* Cancelamento gratuito */}
+            {/* Free cancellation */}
             <div className="flex items-center gap-2 mb-6">
               <div className="w-4 h-4 bg-green-500 rounded-full flex items-center justify-center">
                 <span className="text-white text-xs">✓</span>
               </div>
-              <span className="text-sm text-gray-600">
-                Cancelamento gratuito
-              </span>
+              <span className="text-sm text-gray-600">Free cancellation</span>
             </div>
 
-            {/* Botão de reserva */}
+            {/* Reserve button */}
             <button className="w-full bg-black hover:bg-gray-800 text-white py-4 px-6 rounded-xl font-medium text-lg transition-colors duration-200">
-              Reservar
+              Reserve
             </button>
           </div>
         </div>
 
-        {/* Seção de amenidades */}
+        {/* Amenities section */}
         <div className="mt-8">
-          <h2 className="text-xl font-semibold mb-4">
-            O que este lugar oferece
-          </h2>
+          <h2 className="text-xl font-semibold mb-4">What this place offers</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
               <Wifi className="w-5 h-5 text-gray-700" />
-              <span className="text-sm">Wi-Fi gratuito</span>
+              <span className="text-sm">Free Wi-Fi</span>
             </div>
             <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
               <Car className="w-5 h-5 text-gray-700" />
-              <span className="text-sm">Estacionamento</span>
+              <span className="text-sm">Parking</span>
             </div>
             <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
               <Dumbbell className="w-5 h-5 text-gray-700" />
-              <span className="text-sm">Academia</span>
+              <span className="text-sm">Gym</span>
             </div>
             <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
               <Coffee className="w-5 h-5 text-gray-700" />
-              <span className="text-sm">Café da manhã</span>
+              <span className="text-sm">Breakfast</span>
             </div>
           </div>
         </div>
 
-        {/* Seção de descrição */}
+        {/* Description section */}
         <div className="mt-8">
-          <h2 className="text-xl font-semibold mb-4">Sobre este lugar</h2>
+          <h2 className="text-xl font-semibold mb-4">About this place</h2>
           <p className="text-gray-700 leading-relaxed">
-            Acomodação confortável e bem localizada em São Paulo. Este espaço
-            oferece todas as comodidades necessárias para uma estadia agradável,
-            com fácil acesso ao transporte público e principais pontos
-            turísticos da cidade. Perfeito para viajantes que buscam conforto e
-            praticidade.
+            Comfortable accommodation well located in {cityName}. This space
+            offers all the necessary amenities for a pleasant stay, with easy
+            access to public transportation and main tourist attractions in the
+            city. Perfect for travelers seeking comfort and convenience.
           </p>
         </div>
       </main>
